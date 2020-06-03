@@ -11,14 +11,25 @@ var app = {
     introduirProfessors: function (json) {
         var professors = json.professors;
         var classes = json.classes;
+        var alumnes = json.alumnes;
         professors.forEach(element => {
             $("#professor").append("<option value="+element.classe+" > "+element.nom+" </option>");
         });
 
         $("#professor").change(function(){
-            classes.forEach(element => {
-                if(element.nom == $(this).val()){
-                    $("#classe").html("<option value="+element.nom+" > "+element.nom+" </option>");
+            $("#classe").html("<option value='kk'>Tria una classe</Option>");
+            classes.forEach(element => {                
+                if(element.nom == $(this).val()){                    
+                    $("#classe").append("<option value="+element.nom+" > "+element.nom+" </option>");
+                }
+            });
+        });
+
+        $("#classe").change(function(){
+            $("#alumnes").html("");
+            alumnes.forEach(element => {
+                if (element.classe == $(this).val()){
+                    $("#alumnes").append('<div class="alumnne" style="display: flex; flex-direction: row;"><p style="width: 50px; margin: 0;">' + element.nom + '</p> <input type="checkbox"></div>');
                 }
             });
         });
