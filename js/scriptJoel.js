@@ -1,7 +1,7 @@
-var app = {
-    init: function() {
+// var app = {
+//     init: function() {
         
-    }
-}
+//     }
+// }
 
-document.addEventListener("deviceready", app.init());
+// document.addEventListener("deviceready", app.init());

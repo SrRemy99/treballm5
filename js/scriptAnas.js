@@ -1,6 +1,9 @@
 var app = {
     init: function () {
         app.llegirJson();
+
+
+
     },
     llegirJson: function () {
 
@@ -29,11 +32,22 @@ var app = {
             $("#alumnes").html("");
             alumnes.forEach(element => {
                 if (element.classe == $(this).val()){
-                    $("#alumnes").append('<div class="alumnne" style="display: flex; flex-direction: row;"><p style="width: 50px; margin: 0;">' + element.nom + '</p> <input type="checkbox"></div>');
+                    $("#alumnes").append('<div class="alumne" style="display: flex; flex-direction: row;"><p style="width: 50px; margin: 0;">' + element.nom + '</p> <input type="checkbox"></div>');
                 }
             });
         });
+    },
+
+    guardarAlumnes: function (){
+        $(".alumne").each(function(index, alumne){
+            var nom = $( alumne ).find( "p" ).text();
+            var valor = $( alumne ).find( "input" ).prop('checked');
+            
+            localStorage.setItem(nom, valor);
+
+        });
     }
+
 }
 
 document.addEventListener("deviceready", app.init());
