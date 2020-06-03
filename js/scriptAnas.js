@@ -4,7 +4,7 @@ var app = {
     },
     llegirJson: function () {
 
-        var json = JSON.parse('{ "professors":[ {"nom": "Marc", "classe": "DAM1"}, {"nom": "Marti", "classe": "DAM2"} ],"classes": [ {"nom": "DAM1"}, {"nom": "DAM2"} ],"alumnes": [ {"nom": "Antoni", "classe": "DAM1"}, {"nom": "Antoni", "classe": "DAM1"}, {"nom": "Antoni", "classe": "DAM1"}, {"nom": "Maria", "classe": "DAM2"}, {"nom": "Maria", "classe": "DAM2"}, {"nom": "Maria", "classe": "DAM2"} ] }');
+        var json = JSON.parse('{ "professors":[ {"nom": "Marc", "classe": "DAM1"}, {"nom": "Marti", "classe": "DAM2"} ],"classes": [ {"nom": "DAM1"}, {"nom": "DAM2"} ],"alumnes": [ {"nom": "Antoni Martines", "classe": "DAM1"}, {"nom": "Manuel Gonsales", "classe": "DAM1"}, {"nom": "Antoni Manel", "classe": "DAM1"}, {"nom": "Maria Jose", "classe": "DAM2"}, {"nom": "Nuria Martines", "classe": "DAM2"}, {"nom": "Susana Oria", "classe": "DAM2"} ] }');
         app.introduirProfessors(json);
 
     },
