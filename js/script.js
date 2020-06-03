@@ -4,7 +4,7 @@ var app = {
     },
     llegirJson: function () {
 
-        var json = JSON.parse('{ "professors":[ {"nom": "Marc", "classe": "DAM1"}, {"nom": "Marti", "classe": "DAM2"} ],"classes": [ {"nom": "DAM1"}, {"nom": "DAM2"} ],"alumnes": [ {"nom": "Antoni Martines", "classe": "DAM1"}, {"nom": "Manuel Gonsales", "classe": "DAM1"}, {"nom": "Antoni Manel", "classe": "DAM1"}, {"nom": "Maria Jose", "classe": "DAM2"}, {"nom": "Nuria Martines", "classe": "DAM2"}, {"nom": "Susana Oria", "classe": "DAM2"} ] }');
+        var json = JSON.parse('{ "professors": [ { "nom": "Marc", "classe": "DAM1" }, { "nom": "Marti", "classe": "DAM2" } ], "classes": [ { "nom": "DAM1" }, { "nom": "DAM2" } ], "alumnes": [ { "nom": "Antoni Martines", "classe": "DAM1" }, { "nom": "Manuel Gonsales", "classe": "DAM1" }, { "nom": "Antoni Manel", "classe": "DAM1" }, { "nom": "Maria Jose", "classe": "DAM2" }, { "nom": "Nuria Martines", "classe": "DAM2" }, { "nom": "Susana Oria", "classe": "DAM2" }, { "nom": "Aitor Menta", "classe": "DAM1" }, { "nom": "Matilda Flores", "classe": "DAM1" }, { "nom": "Andrián Droide", "classe": "DAM1" }, { "nom": "Alba Sura", "classe": "DAM2" }, { "nom": "Alan Brito", "classe": "DAM2" }, { "nom": "Alen Gualarga", "classe": "DAM2" }, { "nom": "Alex Plosivo", "classe": "DAM1" }, { "nom": "Dolores Delano", "classe": "DAM1" }, { "nom": "Elver Galarga", "classe": "DAM1" }, { "nom": "Lola Mento", "classe": "DAM2" }, { "nom": "Ana Tomía", "classe": "DAM2" }, { "nom": "Tomás Turbante", "classe": "DAM2" }, { "nom": "Matilda Flores", "classe": "DAM1" }, { "nom": "Joel Bascuñana", "classe": "DAM1" }, { "nom": "Artur Boladeres", "classe": "DAM2" }, { "nom": "Annass Bouchha", "classe": "DAM2" }, { "nom": "Pedro Sanchez", "classe": "DAM2" } ] }');
         app.introduirProfessors(json);
 
     },
@@ -30,9 +30,9 @@ var app = {
             alumnes.forEach(element => {
                 if (element.classe == $(this).val()){
                     if(localStorage.getItem(element.nom) == "true"){
-                        $("#alumnes").append('<div class="alumne" style="display: flex; flex-direction: row;"><p style="width: 50px; margin: 0;">' + element.nom + '</p> <input type="checkbox" checked></div>');
+                        $("#alumnes").append('<div class="alumne"><label class="container"><p>' + element.nom + '</p><input type="checkbox" checked="checked"> <span class="checkmark"></span> </label></div>');
                     } else {
-                        $("#alumnes").append('<div class="alumne" style="display: flex; flex-direction: row;"><p style="width: 50px; margin: 0;">' + element.nom + '</p> <input type="checkbox"></div>');
+                        $("#alumnes").append('<div class="alumne"><label class="container"><p>' + element.nom + '</p><input type="checkbox"> <span class="checkmark"></span> </label></div>');
                     }                    
                 }
             });

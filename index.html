@@ -4,27 +4,38 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/estils.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>PASAR LLISTA</title>
 </head>
 
-<body>
-    <header>
-        <h1>PASAR LLISTA</h1>
-    </header>
-    <main>
-            <select name="professor" id="professor">
-                <option value="">selecciona un professor</option>
-            </select>
-            <select name="classe" id="classe">
-                <option value="">Selecciona una classe</option>
-            </select>
-            <div id="alumnes" style="width: 500px; height: 500px; border: 1px solid black;"></div>
-            <button type="button" onclick="app.guardarAlumnes()" >GUARDAR</button>
-    </main>
-    <footer>
+<body style="background-color: #ebebeb">
+   
+   <div class="container contenidorPrincipal">
+        
+        <main class="container">
+               
+                <h1 style="text-align: center" id="titolH1">PASAR LLISTA</h1>
 
-    </footer>
+                <div class="" id="menuChoose">
+
+                    <select name="professor" id="professor" class="form-group menuItem">
+                        <option value="">Selecciona un professor</option>
+                    </select>
+                    <select name="classe" id="classe" class="form-group menuItem">
+                        <option value="">Tria una classe</option>
+                    </select>
+
+                </div>
+
+                <div id="alumnes" class="divprincipalContingut" style="height: 500px; border: 1px solid black; overflow-y: scroll;"></div>
+                
+                <button type="button" onclick="app.guardarAlumnes()" class="btn btn-primary mt-2 buttonSave">GUARDAR</button>
+        </main>
+    </div>
+    
+    
     <script src="js/script.js"></script>
     <script src="js/scriptJoel.js"></script>
     <script src="js/scriptAnas.js"></script>
