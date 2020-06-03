@@ -1,0 +1,20 @@
+{
+    "professors":[
+        {"nom": "Marc", "classe": "DAM1"},
+        {"nom": "Marti", "classe": "DAM2"}
+    ],
+
+    "classes": [
+        {"nom": "DAM1"},
+        {"nom": "DAM2"}
+    ],
+
+    "alumnes": [
+        {"nom": "Antoni", "classe": "DAM1"},
+        {"nom": "Antoni", "classe": "DAM1"},
+        {"nom": "Antoni", "classe": "DAM1"},
+        {"nom": "Maria", "classe": "DAM2"},
+        {"nom": "Maria", "classe": "DAM2"},
+        {"nom": "Maria", "classe": "DAM2"}
+    ]
+}
