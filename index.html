@@ -13,17 +13,18 @@
         <h1>PASAR LLISTA</h1>
     </header>
     <main>
-        <form action="">
-            <select name="professor" id="professor"></select>
-            <select name="classse" id="classse"></select>
-            <div id="alumnes"></div>
-            <button type="submit" >GUARDAR</button>
-        </form>
+            <select name="professor" id="professor">
+                <option value="">selecciona un professor</option>
+            </select>
+            <select name="classe" id="classe">
+                <option value="">Selecciona una classe</option>
+            </select>
+            <div id="alumnes" style="width: 500px; height: 500px; border: 1px solid black;"></div>
+            <button type="button" onclick="app.guardarAlumnes()" >GUARDAR</button>
     </main>
     <footer>
 
     </footer>
-
     <script src="js/script.js"></script>
     <script src="js/scriptJoel.js"></script>
     <script src="js/scriptAnas.js"></script>
